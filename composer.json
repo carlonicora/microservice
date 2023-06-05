@@ -1,0 +1,44 @@
+{
+  "name": "carlonicora/discovery",
+  "description": "Discovery service for minimalism",
+  "version": "0.1.0",
+  "homepage": "https://carlonicora.com",
+  "time": "2023-03-15",
+  "type": "project",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Carlo Nicora",
+      "email": "carlo@carlonicora.com",
+      "homepage": "https://carlonicora.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "ext-curl": "*",
+    "ext-iconv": "*",
+    "ext-json": "*",
+    "carlonicora/jsonapi": "~3.0",
+    "carlonicora/minimalism": "~13.5",
+    "carlonicora/minimalism-service-api-caller": "~1.0",
+    "carlonicora/minimalism-service-discovery": "~0.1"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^9"
+  },
+  "autoload": {
+    "psr-4": {
+      "CarloNicora\\Minimalism\\Discovery\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CarloNicora\\Minimalism\\Discovery\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "bash vendor/bin/minimalism-post-install.sh"
+  }
+}
